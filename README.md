@@ -11,7 +11,7 @@ bm() {
 
 ```
 
-'+' - add  bookmard
-'-' - remove
-'ENTER' - go to the directory
-'CTR-C' - abort
+'+' - add  bookmard <br>
+'-' - remove <br>
+'ENTER' - go to the directory <br>
+'CTR-C' - abort <br>
