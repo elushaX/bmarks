@@ -140,8 +140,11 @@ int main() {
 
   renderer |= CatchEvent([&](Event event) -> bool {
     if (event.character() == "-") {
-      if (!bookmarks.empty())
-        bookmarks.erase(bookmarks_filtered.begin());
+      if (!bookmarks.empty()) {
+        bookmarks.erase(std::remove(bookmarks.begin(), bookmarks.end(), bookmarks_filtered[selected]), bookmarks.end());
+        selected = std::clamp(selected , 0, (int) bookmarks.size());
+      }
+
       // screen.Exit();
       //entries.pop_back();
     }
